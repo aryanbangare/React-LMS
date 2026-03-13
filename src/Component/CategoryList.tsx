@@ -23,7 +23,7 @@ useEffect(() => {
 }, []);
 
 return (
-    <div className="p-6">
+    <div className="p-6"> 
     <h2 className="text-xl font-bold mb-4">Category List</h2>
 
     <div className="overflow-x-auto">
@@ -39,6 +39,7 @@ return (
             </th>
             </tr>
         </thead>
+        
 
         <tbody className="bg-white">
             {categories.map((c) => (
