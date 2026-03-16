@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-
+import { Loader} from "component";
+import { ApiService } from "Service";
 interface MemberItem {
 memberId: number;
 memberName: string;
@@ -8,20 +9,16 @@ memberType: string;
 
 export default function MemberList() {
 const [members, setMembers] = useState<MemberItem[]>([]);
-
+const[loading,setloading] = useState( true);
 useEffect(() => {
-    const fetchMembers = async () => {
-    try {
-        const response = await fetch("http://localhost:5282/api/members");
-        const data = await response.json();
-        setMembers(data);
-    } catch (error) {
-        console.error("Error fetching members:", error);
-    }
-    };
-
-    fetchMembers();
+ApiService.get<MemberItem[]>("members")
+    .then(setMembers)
+    .finally(() => setloading(false));
 }, []);
+
+if (loading){
+ return <Loader/>
+}
 
 return (
     <div className="p-6">

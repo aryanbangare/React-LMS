@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./Component/Home";
-import CategoryList from "./Component/CategoryList";
-import MemberList from "./Component/MemberList";
+import Home from "./Layout/Home";
+import CategoryList from "./Features/Category/CategoryList";
+import MemberList from "./Features/Member/MemberList";
+import BookList from "./Features/Books/BookList";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/CategoryList" element={<CategoryList />} />
           <Route path="/MemberList" element={<MemberList />} />
+          <Route path="/BookList" element={<BookList />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { ApiService } from "Service";
+import { Loader } from "component";
 
 interface CategoryItem {
 categoryId: number;
@@ -6,21 +8,17 @@ name: string;
 }
 
 export default function CategoryList() {
-const [categories, setCategory] = useState<CategoryItem[]>([]);
-
+const [category, setCategory] = useState<CategoryItem[]>([]);
+const [loading, setLoading] = useState(true);
 useEffect(() => {
-    const fetchCategories = async () => {
-    try {
-        const response = await fetch("http://localhost:5282/api/category");
-        const data = await response.json();
-        setCategory(data);
-    } catch (error) {
-        console.error("Error fetching categories:", error);
-        }
-    };
-
-    fetchCategories();
+    ApiService.get<CategoryItem[]>("category")
+    .then(setCategory)
+    .finally(() => setLoading(false));
+    
 }, []);
+if (loading) {
+    return <Loader />;
+}
 
 return (
     <div className="p-6"> 
@@ -38,11 +36,9 @@ return (
                 Name
             </th>
             </tr>
-        </thead>
-        
-
+        </thead>        
         <tbody className="bg-white">
-            {categories.map((c) => (
+            {category.map((c) => (
             <tr
                 key={c.categoryId}
                 className="hover:bg-gray-50 transition"
@@ -52,7 +48,6 @@ return (
             </tr>
             ))}
         </tbody>
-
         </table>
     </div>
     </div>

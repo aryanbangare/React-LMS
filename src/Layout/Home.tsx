@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 export default function Home() {
@@ -37,12 +36,12 @@ export default function Home() {
     <div className="min-h-screen bg-gray-100">
 
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16 text-center shadow-lg">
+      <div className="bg-linear-to-r from-cyan-500 to-indigo-700 text-black py-16 text-center shadow-lg">
         <h1 className="text-5xl font-bold mb-3">
-          📚 Library Management System
+        Library Management System
         </h1>
         <p className="text-lg opacity-90">
-          Manage books, members, and categories easily
+          Manage books, members, and categories 
         </p>
       </div>
 
@@ -55,7 +54,7 @@ export default function Home() {
             className="bg-white rounded-xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2"
           >
             <div
-              className={`h-2 rounded-t-xl bg-gradient-to-r ${card.color}`}
+              className={`h-2 rounded-t-xl bg-linear-to-r ${card.color}`}
             ></div>
 
             <div className="p-6 text-center">
