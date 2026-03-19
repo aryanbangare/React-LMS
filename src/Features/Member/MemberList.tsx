@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Loader} from "component";
+import { Loader} from "component/Loader";
 import { ApiService } from "Service";
 interface MemberItem {
 memberId: number;

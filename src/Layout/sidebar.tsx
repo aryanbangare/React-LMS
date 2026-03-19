@@ -8,7 +8,7 @@ export default function Sidebar() {
   const activeClass = "bg-blue-600 text-white";
 
   return (
-    <div className="w-64 h-screen bg-gradiant-to bg-gray-900 bg-linear-120 text-white p-5">
+    <div className="w-64 min-h-screen bg-gray-900 text-white p-5">
       <h2 className="text-xl font-bold mb-6">Library Management System</h2>
 
       <nav className="space-y-2">

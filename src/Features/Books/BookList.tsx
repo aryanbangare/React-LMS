@@ -1,5 +1,5 @@
 import { useEffect,useState } from "react";
-import { Loader } from "component";
+import { Loader } from "component/Loader";
 import {ApiService} from "Service";
 
 interface BookItem {
@@ -15,15 +15,15 @@ const [loading, setLoading] = useState(true);
 const [books, setBooks] = useState<BookItem[]>([]);
 useEffect(() => {
 ApiService.get<BookItem[]>("books")
-   .then(setBooks)
-   .finally(() => setLoading(false));
+.then(setBooks)
+.finally(() => setLoading(false));
 
 }, []);
-  if (loading) {
+if (loading) {
     return <Loader />;
-  }
-  
-  
+}
+
+
 return (
     <div className="p-6">
     <h2 className="text-xl font-bold mb-4">Book List</h2>
@@ -58,7 +58,7 @@ return (
                     <td className="px-6 py-3 border-b">{b.bookName}</td>
                     <td className="px-6 py-3 border-b">{b.publisher}</td>
                     <td className="px-6 py-3 border-b">{b.author}</td>      
-                    <td className="px-6 py-3 border-b">${b.price.toFixed(2)}</td>
+                    <td className="px-6 py-3 border-b">${b.price}</td>
                 </tr>
                 ))}
             </tbody>

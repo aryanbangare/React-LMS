@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ApiService } from "Service";
-import { Loader } from "component";
+import { Loader } from "component/Loader";
+
 
 interface CategoryItem {
 categoryId: number;
