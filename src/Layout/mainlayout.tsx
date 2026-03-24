@@ -5,7 +5,7 @@ import Sidebar from "./sidebar";
 
 const Mainlayout = () => {
   return (
-    <div className="bg-linear-to-br from-slate-800 to-white">
+    <div className=" bg-gray-900 ">
       <div className="flex h-screen ">
         <Sidebar />
         <div className="flex flex-col flex-1">

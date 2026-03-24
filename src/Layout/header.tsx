@@ -2,7 +2,7 @@ import React from "react";
 
 const Header: React.FC = () => {
   return (
-    <div className="w-full  bg-linear-to-br from-slate-800 to-slate-900 shadow px-6 py-4 flex justify-between items-center">
+    <div className="w-full   bg-gray-900 shadow px-6 py-4 flex justify-between items-center">
 
       <h1 className="text-2xl md:text-3xl font-bold 
         bg-linear-to-r from-indigo-400 via-purple-400 to-pink-400 

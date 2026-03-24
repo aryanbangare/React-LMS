@@ -5,7 +5,7 @@ import { FaBook, FaUsers, FaExchangeAlt, FaExclamationTriangle } from "react-ico
 export default function Dashboard() {
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-6">Dashboard</h1>
+      <h1 className="text-2xl  text-white font-bold mb-6">Dashboard</h1>
 
       {/* Cards */}
       <div className="grid grid-cols-4 gap-6">

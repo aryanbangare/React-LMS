@@ -9,7 +9,7 @@ export default function Sidebar() {
 
   return (
     <div className="w-64 min-h-screen bg-gray-900 text-white p-5">
-      <h2 className="text-xl font-bold mb-6">Library Management System</h2>
+      <h2 className="text-xl font-bold mb-6">LMS</h2>
 
       <nav className="space-y-2">
         <NavLink

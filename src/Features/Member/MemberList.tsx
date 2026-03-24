@@ -22,7 +22,7 @@ if (loading){
 
 return (
     <div className="p-6">
-    <h2 className="text-xl font-bold mb-4">Member List</h2>
+    <h2 className="text-xl  text-white font-bold mb-4">Member List</h2>
 
     <div className="overflow-x-auto">
         <table className="min-w-full border border-red-200 shadow-md rounded-lg">
