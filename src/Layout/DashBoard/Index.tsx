@@ -12,32 +12,32 @@ export default function Dashboard() {
         
         <StatsCard
           title="Total Books"
-          value="120"
+          value="56"
           icon={<FaBook />}
           color="bg-blue-500"
         />
 
         <StatsCard
           title="Members"
-          value="80"
+          value="46"
           icon={<FaUsers />}
           color="bg-green-500"
         />
 
         <StatsCard
           title="Issued Books"
-          value="45"
+          value="44"
           icon={<FaExchangeAlt />}
           color="bg-purple-500"
         />
 
         <StatsCard
-          title="Overdue"
-          value="8"
+          title="Category"
+          value="30"
           icon={<FaExclamationTriangle />}
           color="bg-red-500"
         />
-
+        
       </div>
     </div>
   );
