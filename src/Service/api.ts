@@ -28,6 +28,10 @@ async function request<TResult>(method: string, url: string, body?: unknown) {
     },
   });
 
+  if(response.headers.get('content-length') === '0') {
+    return {} as TResult;
+  }
+
   const json = await response.json();
 
   return json as TResult;

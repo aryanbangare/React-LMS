@@ -64,7 +64,7 @@ export default function CategoryList() {
           tableStyle={{ minWidth: "50rem" }}
         >
           <Column field="name" header="Name" style={{ width: "70%" }}></Column>
-          <Column header="Actions" body={actionBodyTemplate} style={{ width: "60%" }}></Column>
+          <Column header="Actions" body={actionBodyTemplate} style={{ width: "40%" }}></Column>
         </DataTable>
       </div>
     </div>

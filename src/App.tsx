@@ -3,7 +3,7 @@ import "./App.css";
 
 //import Home from "./Layout/Home";
 import CategoryList from "./Features/Category/Index";
-import MemberList from "./Features/Member/MemberList";
+import MemberList from "./Features/Member/index";
 import BookList from "./Features/Books/pages/List";
 import BookIssueList from "./Features/BookIssue/";
 import Dashboard from "Layout/DashBoard/Index";
@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Mainlayout />}>
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/books" element={<BookList />} />
-          <Route path="/members" element={<MemberList />} />
+          <Route path="/members/*" element={<MemberList />} />
           <Route path="/categories/*" element={<CategoryList />} />
           <Route path="/bookissue/*" element={<BookIssueList />} />
         </Route>
